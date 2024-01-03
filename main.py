@@ -2,6 +2,20 @@ import random
 import sys
 
 
+def is_draw(board: list[list[str]]) -> bool:
+    pass
+
+
+def print_board(board: list[list[str]]):
+    pass
+
+
+def put_mark_on_board(board: list[list[str]], player: str):
+    pass
+
+
+def is_win(board: list[list[str]], player: str) -> bool:
+    pass
 
 
 if __name__ == '__main__':

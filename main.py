@@ -1,5 +1,6 @@
 import random
 import sys
+from colorama import Back, Fore, init
 
 
 def is_draw(board: list[list[str]]) -> bool:
@@ -69,11 +70,15 @@ if __name__ == '__main__':
 
     # game loop
     while not is_draw(board):
-        # TODO: change player
-        print_board(board)
+        if player == "X":
+            player = "O"
+        else:
+            player = "X"
         put_mark_on_board(board, player)
+        print_board(board)
         if is_win(board, player):
-            # TODO: greet a player with a win
+            # greet a player with a win
+            print(f"Player: {player} win!")
             break
     else:
         # tell that it is a draw

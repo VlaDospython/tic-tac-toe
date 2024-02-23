@@ -1,14 +1,15 @@
 import random
 import sys
-from colorama import Back, Fore, init
+# from colorama import Back, Fore, init
 
 
 def is_draw(board: list[list[str]]) -> bool:
-    # TODO: try to implement
+    # try to implement
     #  порахувати скільки пробілів у board
     #  якщо пробілів 0, то це нічия
-    pass
-
+    total_spaces = sum(row.count(' ') for row in board)
+    if total_spaces == 0:
+        return True
 
 def print_board(board: list[list[str]]):
     for row in board:
@@ -22,7 +23,7 @@ def put_mark_on_board(board: list[list[str]], player: str):
     if board[row-1][column-1] == " ":
         board[row-1][column-1] = player
     else:
-        print("Це місце зайняте. Спробуйте інше")
+        print("Це місце зайняте. Спробуйте інший")
         put_mark_on_board(board, player)
 
 

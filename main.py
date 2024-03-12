@@ -47,7 +47,7 @@ def is_win(board: list[list[str]], player: str) -> bool:
     elif board[0][0] == player and board[1][0] == player and board[2][0] == player:
         return True
     # другий стовпчик
-    elif board[0][1] == player and board[1][1] == player and board[2][2] == player:
+    elif board[0][1] == player and board[1][1] == player and board[2][1] == player:
         return True
     # третій стовпчик
     elif board[0][2] == player and board[1][2] == player and board[2][2] == player:

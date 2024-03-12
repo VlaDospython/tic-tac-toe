@@ -36,6 +36,7 @@ def is_win(board: list[list[str]], player: str) -> bool:
     """
     # перший рядок
     if board[0][0] == player and board[0][1] == player and board[0][2] == player:
+
         return True
     # другий рядок
     elif board[1][0] == player and board[1][1] == player and board[1][2] == player:
@@ -67,6 +68,7 @@ if __name__ == '__main__':
         [' ', ' ', ' '],
         [' ', ' ', ' ']
     ]
+    print_board(board)
     player = 'O'                # get a random player
 
     # game loop
